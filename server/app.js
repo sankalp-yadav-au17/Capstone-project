@@ -17,15 +17,17 @@ app.use(express.json());
 
 app.use(require('./router/auth'));
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 app.get('/signup', (req, res) => {
     res.send(`Hello Registration world from the server`);
 });
-
-const buildFolderPath = resolve(__dirname, '../client/build') 
+if(process.env.NODE_ENV == 'production'){
+    app.use(express.static("client/build"))
+    const path = require("path")
+}
 app.get("*", (req, res) => {
-    res.sendFile(`${buildFolderPath}/index.html`)
+    res.sendFile(path.resolve(__dirname, 'client','build','index.html'));
 })
 
 app.listen(PORT, () => {
