@@ -1,0 +1,24 @@
+{
+  "name": "capstone-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
+  "scripts": {
+    "heroku-prebuild": "cd client && npm install && npm run build && cd .. && cd server && npm install",
+    "start": "cd server && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sankalp-yadav-au17/Capstone-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sankalp-yadav-au17/Capstone-project/issues"
+  },
+  "homepage": "https://github.com/sankalp-yadav-au17/Capstone-project#readme"
+}

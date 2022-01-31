@@ -22,13 +22,15 @@ const PORT = process.env.PORT || 5000;
 app.get('/signup', (req, res) => {
     res.send(`Hello Registration world from the server`);
 });
-if(process.env.NODE_ENV == 'production'){
-    app.use(express.static("client/build"))
-    const path = require("path")
-}
+
+const buildFolderPath = resolve(__dirname, '../client/build') 
+
+app.use(express.static(buildFolderPath))
+
 app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client','build','index.html'));
+    res.sendFile(`${buildFolderPath}/index.html`)
 })
+
 
 app.listen(PORT, () => {
     console.log(`server is runnig at port no ${PORT}`);
