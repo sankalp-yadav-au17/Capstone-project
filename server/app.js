@@ -1,0 +1,35 @@
+const dotenv = require("dotenv");
+const mongoose = require('mongoose');
+const express = require('express');
+const cookieParser = require('cookie-parser');
+const resolve = r
+
+const app = express();
+app.use(cookieParser());
+
+dotenv.config({ path: './config.env' });
+
+require('./db/conn');
+
+
+app.use(express.json());
+
+
+app.use(require('./router/auth'));
+
+const PORT = process.env.PORT;
+
+app.get('/signup', (req, res) => {
+    res.send(`Hello Registration world from the server`);
+});
+
+const buildFolderPath = resolve(__dirname, '../client/build') 
+app.get("*", (req, res) => {
+    res.sendFile(`${buildFolderPath}/index.html`)
+})
+
+app.listen(PORT, () => {
+    console.log(`server is runnig at port no ${PORT}`);
+})
+
+
