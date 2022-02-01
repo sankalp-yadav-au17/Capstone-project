@@ -1,7 +1,7 @@
 import React, {useEffect, useState}  from 'react'
 import thapapic from "../images/thapa1.png";
 import aboutpic from "../images/aboutpic.png";
-
+//abhishek
 import { useHistory } from "react-router-dom";
 
 const About = () => {
