@@ -1,5 +1,4 @@
 import React, {useEffect, useState}  from 'react'
-import thapapic from "../images/thapa1.png";
 import aboutpic from "../images/aboutpic.png";
 //abhishek
 import { useHistory } from "react-router-dom";
@@ -45,9 +44,9 @@ const About = () => {
                 <form method="GET">
                     <div className="row">
                         <div className="col-md-4">
-                            <div className="profile-img">
+                            {/* <div className="profile-img">
                                   <img src={userData.name === "Vinod Bahadur Thapa" ? thapapic : aboutpic} alt="thapa" />
-                            </div>
+                            </div> */}
                           
                         </div>
 
