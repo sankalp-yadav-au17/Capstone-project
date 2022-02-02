@@ -81,14 +81,14 @@ const Contact = () => {
                          <img src="https://img.icons8.com/office/24/000000/iphone.png" alt="" /></div>
                          <div className="contact_info_content">
                              <div className="contact_info_title">Phone</div>
-                             <div className="contact_info_text">+91 1111 543 2198</div>
+                             <div className="contact_info_text">+91 1234 543 2198</div>
                          </div>
                      </div> 
                      <div className="contact_info_item d-flex flex-row align-items-center justify-content-start">
                          <div className="contact_info_image"><img src="https://img.icons8.com/ultraviolet/24/000000/filled-message.png" alt="" /></div>
                          <div className="contact_info_content">
                              <div className="contact_info_title">Email</div>
-                             <div className="contact_info_text">contact@thapa.com</div>
+                             <div className="contact_info_text">contact@aragon.com</div>
                          </div>
                      </div> 
                      <div className="contact_info_item d-flex flex-row align-items-center justify-content-start">
